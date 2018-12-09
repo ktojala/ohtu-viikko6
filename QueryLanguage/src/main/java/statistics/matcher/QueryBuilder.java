@@ -28,4 +28,8 @@ public class QueryBuilder {
         return this;
     }
     
+    public QueryBuilder oneOf(Matcher... matchers) {
+        this.m = new Or(matchers);
+        return this;
+    }
 }
